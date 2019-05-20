@@ -1,28 +1,28 @@
 package DungeonsAndDragons;
 
 
-// déclaration de l'objet Magicien qui un enfant de personnage
+// déclaration de l'objet Magicien qui est un enfant de personnage
 public class Magician extends Personnage {
 
-    // déclaration ces Attributs
+    // déclaration des Attributs
     private String classname;
     private String picture;
     private Spell spell;
     private Invocation invocation;
 
-    // déclaration d'une méthode vide
+    // Constructeur d'initialisation de Magicien vide
     public Magician(String name, int lifeLevel, int forceLevel) {
         super();
     }
 
-    // déclaration d'une méthode comportant un parametre
+    // Constructeur d'initialisation de Magicien comportant un parametre
     public Magician(String name) {
 
         // super appel la class mère
         super(name);
     }
 
-    // Constructeur d'initialisation dé Magicien avec des param
+    // Constructeur d'initialisation de Magicien avec des param
     public Magician(String name, int lifeLevel, int forceLevel, Spell spell, Invocation invocation) {
 
         super(name, lifeLevel, forceLevel);

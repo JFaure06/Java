@@ -44,13 +44,16 @@ public class Game {
             System.out.println("Veuillez choisir un nom :");
             String name = sc.next();
 
+            // déclare un variable qui est instancier d'un nombre aléatoire avec un max et minimum
             int lifeLevel = (int) (Math.random() * (3 - 6));
 
             int forceLevel = (int) (Math.random() * (5 - 10));
 
+            // déclaration d'une variable vide
             Spell spell = new Spell();
             Invocation invocation = new Invocation();
 
+            //
             magician = new Magician(name, lifeLevel, forceLevel, spell, invocation);
 
             System.out.println(magician.toString());

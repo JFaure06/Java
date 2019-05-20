@@ -2,33 +2,30 @@ package DungeonsAndDragons;
 
 import javax.naming.Name;
 
-// déclaration de l'objet Guerrier qui est lui aussi un enfant de personnage
+// déclaration de l'objet Guerrier qui est lui aussi est un enfant de personnage
 public class Warrior extends Personnage {
 
+    // déclaration des Attributs
     private String classname;
     private String avatar;
     private Weapon weapon;
     private Shield shield;
 
+    // création de différents constructeur
 
-    public Warrior(String name, int lifeLevel, int forceLevel) {
+    // // Constructeur d'initialisation du Guerrier vide
+    public Warrior() {
     super();
 
     }
 
+    // Constructeur d'initialisation du Guerrier avec un param
     public Warrior(String name) {
 
         super(name);
     }
 
-    public Warrior(String name, int lifeLevel, int forceLevel, Weapon weapon) {
-        super(name, lifeLevel, forceLevel);
-        this.classname = "Guerrier";
-        this.avatar = "../Warrior.jpg";
-        this.weapon = weapon;
-
-    }
-
+    // Constructeur d'initialisation du Guerrier avec plusieurs param
     public Warrior(String name, int lifeLevel, int forceLevel, Weapon weapon, Shield shield) {
         super(name, lifeLevel, forceLevel);
         this.classname = "Guerrier";
@@ -39,11 +36,14 @@ public class Warrior extends Personnage {
     }
 
     @Override
+    // methode qui permet de récuperer la valeur de vie
     public int getLifeLevel() {
         return super.getLifeLevel();
     }
 
     @Override
+
+    // méthode qui permet de modifier la valeur de vie
     public void setLifeLevel(int lifeLevel) {
         super.setLifeLevel(lifeLevel);
     }
