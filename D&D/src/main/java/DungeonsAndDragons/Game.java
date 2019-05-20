@@ -28,9 +28,9 @@ public class Game {
                 System.out.println("Veuillez choisir un nom :");
                 String name = sc.next();
 
-                int lifeLevel = (int) (Math.random() * (5 - 10));
+                int lifeLevel = (int) (Math.random() * (10 - 5));
 
-                int forceLevel = (int) (Math.random() * (5 - 10));
+                int forceLevel = (int) (Math.random() * (10 - 5));
                 // la personne choisis son arme
                 //System.out.println("Veuillez choisir l'arme :");
                 //String arm = sc.nextLine();
@@ -50,9 +50,9 @@ public class Game {
                 String name = sc.next();
 
                 // déclare un variable qui est instancier d'un nombre aléatoire avec un max et minimum
-                int lifeLevel = (int) (Math.random() * (3 - 6));
+                int lifeLevel = (int) (Math.random() * (6 - 3));
 
-                int forceLevel = (int) (Math.random() * (5 - 10));
+                int forceLevel = (int) (Math.random() * (10 - 5));
 
                 // déclaration d'une variable vide
                 Spell spell = new Spell();

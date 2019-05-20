@@ -18,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/DungeonsAndDragons/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="56" column="50" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
+            <state relative-caret-position="-428">
+              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
             </state>
           </provider>
         </entry>
@@ -49,8 +49,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/DungeonsAndDragons/Warrior.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="655">
-              <caret line="61" column="16" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="16" />
+            <state relative-caret-position="335">
+              <caret line="61" column="224" selection-start-line="61" selection-start-column="224" selection-end-line="61" selection-end-column="224" />
               <folding>
                 <element signature="e#669#670#0" expanded="true" />
                 <element signature="e#712#713#0" expanded="true" />
@@ -65,11 +65,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/DungeonsAndDragons/Magician.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-554">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="419">
+              <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
               <folding>
                 <element signature="e#287#288#0" expanded="true" />
                 <element signature="e#308#309#0" expanded="true" />
@@ -325,15 +325,16 @@
       <option name="presentableId" value="Default" />
       <updated>1558083048376</updated>
       <workItem from="1558083060109" duration="14891000" />
-      <workItem from="1558334526456" duration="21053000" />
+      <workItem from="1558334526456" duration="22124000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35944000" />
+    <option name="totallyTimeSpent" value="37015000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="0" width="1920" height="1080" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14887941" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -474,23 +475,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DungeonsAndDragons/Warrior.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="655">
-          <caret line="61" column="16" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="16" />
-          <folding>
-            <element signature="e#669#670#0" expanded="true" />
-            <element signature="e#712#713#0" expanded="true" />
-            <element signature="e#773#774#0" expanded="true" />
-            <element signature="e#818#819#0" expanded="true" />
-            <element signature="e#866#867#0" expanded="true" />
-            <element signature="e#910#911#0" expanded="true" />
-            <element signature="e#973#974#0" expanded="true" />
-            <element signature="e#1020#1021#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DungeonsAndDragons/Invocation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -502,25 +486,6 @@
             <element signature="e#239#240#0" expanded="true" />
             <element signature="e#271#272#0" expanded="true" />
             <element signature="e#344#345#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DungeonsAndDragons/Magician.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-554">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#287#288#0" expanded="true" />
-            <element signature="e#308#309#0" expanded="true" />
-            <element signature="e#845#846#0" expanded="true" />
-            <element signature="e#888#889#0" expanded="true" />
-            <element signature="e#859#860#0" expanded="true" />
-            <element signature="e#904#905#0" expanded="true" />
-            <element signature="e#1066#1067#0" expanded="true" />
-            <element signature="e#1110#1111#0" expanded="true" />
-            <element signature="e#1173#1174#0" expanded="true" />
-            <element signature="e#1220#1221#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -544,8 +509,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DungeonsAndDragons/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="56" column="50" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
+        <state relative-caret-position="-428">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DungeonsAndDragons/Warrior.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="61" column="224" selection-start-line="61" selection-start-column="224" selection-end-line="61" selection-end-column="224" />
+          <folding>
+            <element signature="e#669#670#0" expanded="true" />
+            <element signature="e#712#713#0" expanded="true" />
+            <element signature="e#773#774#0" expanded="true" />
+            <element signature="e#818#819#0" expanded="true" />
+            <element signature="e#866#867#0" expanded="true" />
+            <element signature="e#910#911#0" expanded="true" />
+            <element signature="e#973#974#0" expanded="true" />
+            <element signature="e#1020#1021#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DungeonsAndDragons/Magician.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+          <folding>
+            <element signature="e#287#288#0" expanded="true" />
+            <element signature="e#308#309#0" expanded="true" />
+            <element signature="e#845#846#0" expanded="true" />
+            <element signature="e#888#889#0" expanded="true" />
+            <element signature="e#859#860#0" expanded="true" />
+            <element signature="e#904#905#0" expanded="true" />
+            <element signature="e#1066#1067#0" expanded="true" />
+            <element signature="e#1110#1111#0" expanded="true" />
+            <element signature="e#1173#1174#0" expanded="true" />
+            <element signature="e#1220#1221#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -53,6 +53,6 @@ public class Magician extends Personnage {
     }
 
     public String toString() {
-        return "je suis un : " + classname + " " + picture + ", je m'appel : " + name + ", mon sort principal est : " + spell + ", mon sort de défense est : " + invocation + ".";
+        return "Personnage de Classe : " + classname + " " + picture + ", Nom : " + name + ", sort principal : " + spell + ", sort de défense : " + invocation +  ", Vie : " + getLifeLevel() + ", Force : " + getForceLevel() + "." ;
     }
 }

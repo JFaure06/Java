@@ -59,7 +59,7 @@ public class Warrior extends Personnage {
     }
 
     public String toString() {
-        return "je suis un : " + classname + " " + avatar + " " + ", je m'appel : " + name + ", mon arme principal est : " + weapon + ", mon bouclier est : " + shield + ".";
+        return "Personnage de Classe : " + classname + " " + avatar + " " + ", nom : " + name + ", arme principal : " + weapon + ", bouclier : " + shield + ", Vie : " + getLifeLevel() + ", Force : " + getForceLevel() + "."  ;
     }
 
 }
