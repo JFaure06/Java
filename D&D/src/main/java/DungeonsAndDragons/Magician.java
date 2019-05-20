@@ -11,7 +11,7 @@ public class Magician extends Personnage {
     private Invocation invocation;
 
     // Constructeur d'initialisation de Magicien vide
-    public Magician(String name, int lifeLevel, int forceLevel) {
+    public Magician() {
         super();
     }
 
