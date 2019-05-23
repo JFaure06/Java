@@ -4,6 +4,12 @@ public class Spell {
 
     private String name;
 
+    /**
+     * Constructeur Spell
+     *
+     * @see Spell#name
+     */
+
     public Spell(){
 
         this.name = "arcane waves";

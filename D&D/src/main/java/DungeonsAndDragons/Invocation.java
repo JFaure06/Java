@@ -4,6 +4,12 @@ public class Invocation {
 
     private String name;
 
+    /**
+     * Constructeur Invocation
+     *
+     * @see Invocation#name
+     */
+
     public Invocation() {
         name = "ice shield";
     }

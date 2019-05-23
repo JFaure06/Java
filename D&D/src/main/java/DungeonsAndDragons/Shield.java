@@ -4,8 +4,13 @@ public class Shield {
 
     private String name;
 
-    public Shield() {
+    /**
+     * Constructeur Shield
+     *
+     * @see Shield#name
+     */
 
+    public Shield() {
         name = "Eberli Charo";
     }
 
@@ -20,5 +25,4 @@ public class Shield {
     public String toString() {
         return this.name;
     }
-
 }

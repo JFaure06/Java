@@ -1,58 +1,98 @@
 package DungeonsAndDragons;
 
+/**
+ * <b>Magician est la classe fille de Personnage du jeu</b>
+ *  * <p>
+ *  * Un Magician est caractérisé par les informations suivantes :
+ *  * <ul>
+ *  *     <li>Un nom, suceptible d'être changé.</li>
+ *  *     <li>Une image, suceptible d'être changé.</li>
+ *  *     <li>Un Vie, suceptible d'être changé.</li>
+ *  *     <li>Une force suceptible d'être changé.</li>
+ *  *     <li>Une arme, suceptible d'être changé.</li>
+ *  *     <li>Un bouclier, suceptible d'être changé.</li>
+ *  * </ul>
+ *  * </p>
+ */
 
-// déclaration de l'objet Magicien qui est un enfant de personnage
 public class Magician extends Personnage {
 
-    // déclaration des Attributs
-    private String classname;
-    private String picture;
     private Spell spell;
     private Invocation invocation;
 
-    // Constructeur d'initialisation de Magicien vide
+    /**
+     * Constructeur Magician sans paramètre
+     */
+
     public Magician() {
         super();
     }
 
-    // Constructeur d'initialisation de Magicien comportant un parametre
+    /**
+     * Constructeur Magician avec en paramètre :
+     *
+     * @param name
+     */
+
     public Magician(String name) {
 
-        // super appel la class mère
         super(name);
     }
 
-    // Constructeur d'initialisation de Magicien avec des param
-    public Magician(String name, int lifeLevel, int forceLevel, Spell spell, Invocation invocation) {
+    /**
+     * Constructeur Magician avec en paramètre :
+     * @param name
+     * @param lifeLevel
+     * @param forceLevel
+     * @param spell
+     * @param invocation
+     *
+     * @see Magician#spell
+     * @see Magician#invocation
+     */
 
+    public Magician(String name, int lifeLevel, int forceLevel, Spell spell, Invocation invocation) {
         super(name, lifeLevel, forceLevel);
-        classname = "Magicien";
-        picture = "../Magician.png";
         this.spell = spell;
         this.invocation = invocation;
     }
 
-    @Override
-    public int getLifeLevel() {
-        return super.getLifeLevel();
+    /**
+     * Constructeur Magician avec en paramètre :
+     * @param name
+     * @param lifeLevel
+     * @param forceLevel
+     * @param img
+     * @param spell
+     * @param invocation
+     *
+     * @see Magician#spell
+     * @see Magician#invocation
+     */
+
+    public Magician(String name, int lifeLevel, int forceLevel, String img, Spell spell, Invocation invocation) {
+        super(name, lifeLevel, forceLevel, img);
+        this.spell = spell;
+        this.invocation = invocation;
     }
 
-    @Override
-    public void setLifeLevel(int lifeLevel) {
-        super.setLifeLevel(lifeLevel);
+    public Spell getSpell() {
+        return spell;
     }
 
-    @Override
-    public int getForceLevel() {
-        return super.getForceLevel();
+    public void setSpell(Spell spell) {
+        this.spell = spell;
     }
 
-    @Override
-    public void setForceLevel(int forceLevel) {
-        super.setForceLevel(forceLevel);
+    public Invocation getInvocation() {
+        return invocation;
+    }
+
+    public void setInvocation(Invocation invocation) {
+        this.invocation = invocation;
     }
 
     public String toString() {
-        return "Personnage de Classe : " + classname + " " + picture + ", Nom : " + name + ", sort principal : " + spell + ", sort de défense : " + invocation +  ", Vie : " + getLifeLevel() + ", Force : " + getForceLevel() + "." ;
+        return "Personnage de Classe : " + this.getClass().getSimpleName() + super.toString() +", sort principal : " + spell + ", sort de défense : " + invocation + "." ;
     }
 }
