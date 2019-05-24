@@ -1,28 +1,34 @@
 package DungeonsAndDragons;
 
-public class Invocation {
-
-    private String name;
+public class Invocation extends Defense{
 
     /**
      * Constructeur Invocation
      *
-     * @see Invocation#name
+     * @see Invocation
      */
 
     public Invocation() {
-        name = "ice shield";
+        this("ice shield");
     }
 
+    public Invocation(String name){
+
+        super(name);
+    }
+
+    @Override
     public String getName() {
-        return name;
+        return super.getName();
     }
 
-    public void setName(String name) {
-        this.name = name;
+    @Override
+    public void setName(final String name) {
+        super.setName(name);
     }
 
+    @Override
     public String toString() {
-        return this.name;
+        return getClass().getSimpleName() + " : " + getName();
     }
 }

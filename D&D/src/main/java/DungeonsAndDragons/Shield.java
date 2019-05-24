@@ -1,28 +1,31 @@
 package DungeonsAndDragons;
 
-public class Shield {
-
-    private String name;
+public class Shield extends Defense{
 
     /**
      * Constructeur Shield
      *
-     * @see Shield#name
      */
-
     public Shield() {
-        name = "Eberli Charo";
+       this("Eberli Charo");
     }
 
+    public Shield (String name){
+        super(name);
+    }
+
+    @Override
     public String getName() {
-        return name;
+        return super.getName();
     }
 
-    public void setName(String name) {
-        this.name = name;
+    @Override
+    public void setName(final String name) {
+        super.setName(name);
     }
 
+    @Override
     public String toString() {
-        return this.name;
+        return getClass().getSimpleName() + " : " + getName();
     }
 }

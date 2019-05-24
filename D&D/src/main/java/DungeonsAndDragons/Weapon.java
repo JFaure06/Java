@@ -1,28 +1,34 @@
 package DungeonsAndDragons;
 
-public class Weapon {
-
-    private String name;
+public class Weapon extends Attack{
 
     /**
      * Constructeur Weapon
      *
-     * @see Weapon#name en dur
      */
 
     public Weapon() {
-        this.name ="épée Abéclat";
+
+        this("épée Abéclat");
     }
 
+   public Weapon(String name){
+
+        super(name);
+   }
+
+    @Override
     public String getName() {
-        return name;
+        return super.getName();
     }
 
-    public void setName(String name) {
-        this.name = name;
+    @Override
+    public void setName(final String name) {
+        super.setName(name);
     }
 
+    @Override
     public String toString() {
-        return this.name;
+        return getClass().getSimpleName() + " : " + getName() + ", ";
     }
 }

@@ -1,6 +1,8 @@
 package DungeonsAndDragons;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 /**
  * Programme du jeu Dungeon & Dragon
@@ -22,132 +24,151 @@ public class Game2 {
         Personnage[] listPersonnages = new Personnage[20];
         int index = 0;
 
+        ArrayList<Personnage> personnages = new ArrayList<>();
 
         while (true) {
+            {
 
-            //ArrayList<Personnage> personnages = new ArrayList<>();
-            //personnages.add(warrior);
-            //personnages.add(magician);
+                // Affiche menu
+                System.out.println("Menu");
+                System.out.println("1 : création de personnages");
+                System.out.println("2 : Liste des personnages existant");
+                System.out.println("3 : Personnage");
+                System.out.println("votre choix");
+                int menuChoice = 0;
 
-            // Affiche menu
-            System.out.println("Menu");
-            System.out.println("1 : création de personnages");
-            System.out.println("2 : Liste des personnages existant");
-            System.out.println("3 : Personnage");
-            System.out.println("votre choix");
-            int menuChoice = sc.nextInt();
+                try {
 
-            switch (menuChoice) {
+                    menuChoice = sc.nextInt();
+                    sc.nextLine();
+                }catch (InputMismatchException a){
+                    System.out.println("erreur ce n'est pas un nombre");
+                }
 
-                case 1:
+                switch (menuChoice) {
 
-                    System.out.println("voulais vous créer un personnage ? (oui ou non)");
-                    String reponse = sc.next();
+                    case 1:
 
-                    if (reponse.equals("oui")) {
+                        System.out.println("voulais vous créer un personnage ? (oui ou non)");
+                        String reponse = sc.next();
 
-                        System.out.println("Entrer le nom du personnage :");
-                        String name = sc.next();
+                        if (reponse.equals("oui")) {
 
-                        System.out.println("Veuillez choisir un personnage 1 pour Guerrier, 2 pour Magicien"); // Je demande au joueur de sélectionner son personnage
+                            System.out.println("Entrer le nom du personnage :");
+                            String name = sc.next();
 
-                        int choice = sc.nextInt();// je met son choix dans une variable
+                            System.out.println("Veuillez choisir un personnage 1 pour Guerrier, 2 pour Magicien"); // Je demande au joueur de sélectionner son personnage
 
-                        // je fais une condition
+                            int choice = sc.nextInt();// je met son choix dans une variable
+                            sc.nextLine();
 
-                        if (choice == 1) { // si le joueur choisis 1 alors il créais un Gurerrier
+                            // je fais une condition
 
-                            int lifeLevel = (int) (Math.random() * (10 - 5) + 1);
-                                                                                    // pour Guerrier la vie et force sont générées aléatoirement avec un nombre maximum et minimum
-                            int forceLevel = (int) (Math.random() * (10 - 5) + 1);
+                            Personnage p = null;
+                            Attack a = null;
+                            Defense d = null;
 
-                            Weapon weapon = new Weapon(); // je créais une variable
-                            Shield shield = new Shield();
+                            if (choice == 1) { // si le joueur choisis 1 alors il créais un Gurerrier
 
-                            warrior = new Warrior(name, lifeLevel, forceLevel, weapon, shield);
+                                a = new Weapon(); // je créais une variable
+                                d = new Shield();
 
-                            System.out.println("personnage créé :");
-                            listPersonnages[index] = warrior;
-                            System.out.println(listPersonnages[index].toString());
+                                p = new Warrior(name);
+
+                            } else if (choice == 2) {
+
+                                a = new Spell();
+                                d = new Invocation();
+
+                                p = new Magician(name); // mon onbjet est instacier en récupérant les infos
+
+                            } else {
+                                System.out.println("erreur de saisi");
+                            }
+
+                            personnages.add(p);
+
+                            p.setAttack(a);
+                            p.setDefense(d);
+
+                            System.out.println("personnage créé :" + p);
+                            listPersonnages[index] = p;
                             index++;
 
-                            //personnages.add(warrior);
 
-                        } else if (choice == 2) {
 
-                            int lifeLevel = (int) (Math.random() * (6 - 3) + 1); // déclare un variable qui est instancier d'un nombre aléatoire avec un max et minimum
-                            int forceLevel = (int) (Math.random() * (10 - 5) + 1);
-
-                            Spell spell = new Spell();
-                            Invocation invocation = new Invocation();
-
-                            magician = new Magician(name, lifeLevel, forceLevel, spell, invocation); // mon onbjet est instacier en récupérant les infos
-
-                            listPersonnages[index] = magician;
-                            System.out.println(listPersonnages[index].toString());
-                            index++;
-
-                            //personnages.add(magician);
-
-                        } else {
-
-                            System.out.println("erreur de saisi");
                         }
-                    }
-                    break;
+                        break;
 
-                case 2:
+                    case 2:
 
-                    for (int i = 0; i < listPersonnages.length; i++) {
-                        if (listPersonnages[i] != null) {
-                            System.out.println(i + " : " + listPersonnages[i].getClass().getSimpleName() + " | Nom : " + listPersonnages[i].getName() + " | Vie : " + listPersonnages[i].getLifeLevel() + " | Force : " + listPersonnages[i].getForceLevel());
+                        for (int i = 0; i < listPersonnages.length; i++) {
+                            if (listPersonnages[i] != null) {
+                                System.out.println(i + " : " + listPersonnages[i].getClass().getSimpleName() + " | Nom : " + listPersonnages[i].getName() + " | Vie : " + listPersonnages[i].getLifeLevel() + " | Force : " + listPersonnages[i].getForceLevel() + " | " + listPersonnages[i].getAttack() + " | " + listPersonnages[i].getDefense() );
+                            }
                         }
+
+                        for (int j = 0; j < personnages.size(); j++){
+
+                        System.out.println(j + " : " + personnages.get(j).getClass().getSimpleName());
+                            System.out.println((j + " : " + personnages.get(j)));
                     }
-                    break;
+                        break;
 
-                case 3:
+                    case 3:
 
-                    for (int i = 0; i < listPersonnages.length; i++) {
-                        if (listPersonnages[i] != null) {
-                            System.out.println(i + " :" + listPersonnages[i].getClass().getSimpleName());
+                        for (int i = 0; i < listPersonnages.length; i++) {
+                            if (listPersonnages[i] != null) {
+                                System.out.println(i + " :" + listPersonnages[i].getClass().getSimpleName());
+                            }
                         }
-                    }
 
-                    System.out.println();
-                    System.out.println("1 : informations personnage, 2 : Suppression personnage, 3 : Modification personnage");
-                    System.out.println("votre choix:");
+                        for (int j = 0; j < personnages.size(); j++){
 
-                    int submenu = sc.nextInt();
+                            System.out.println(j + " : " + personnages.get(j).getClass().getSimpleName() +  " | Nom : " + personnages.get(j).getName() + " | Vie : " + personnages.get(j).getLifeLevel() + " | Force : " + personnages.get(j).getForceLevel());
+                        }
 
-                    switch (submenu) {
+                        System.out.println();
+                        System.out.println("1 : informations personnage, 2 : Suppression personnage, 3 : Modification personnage");
+                        System.out.println("votre choix:");
 
-                        case 1: // affiche information personnage
+                        int submenu = sc.nextInt();
+                        sc.nextLine();
 
-                            System.out.println("entre le numero du personnage");
-                            int select = sc.nextInt();
-                            System.out.println(listPersonnages[select]);
-                            break;
+                        switch (submenu) {
 
-                        case 2: // supprime personnage
+                            case 1: // affiche information personnage
 
-                            System.out.println("entre le numero du personnage à supprimer");
-                            int idslect = sc.nextInt();
-                            listPersonnages[idslect] = null;
-                            break;
+                                System.out.println("entre le numero du personnage");
+                                int select = sc.nextInt();
+                                sc.nextLine();
+                                System.out.println(listPersonnages[select]);
+                                System.out.println(personnages.get(select));
+                                break;
 
-                        case 3: //modifie ces infos
+                            case 2: // supprime personnage
 
+                                System.out.println("entre le numero du personnage à supprimer");
+                                int idslect = sc.nextInt();
+                                sc.nextLine();
+                                listPersonnages[idslect] = null;
 
-                            System.out.println("entre le numéro du personnage a modifier");
-                            int pSelect = sc.nextInt();
-                            System.out.println("change le nom : ");
-                            String newName = sc.nextLine();
-                            listPersonnages[pSelect].setName(newName);
+                                personnages.remove(idslect);
+                                break;
 
+                            case 3: //modifie ces infos
 
-                            break;
-                    }
+                                System.out.println("entre le numéro du personnage a modifier");
+                                int pSelect = sc.nextInt();
+                                sc.nextLine();
+                                System.out.println("change le nom : ");
+                                String newName = sc.nextLine();
+                                listPersonnages[pSelect].setName(newName);
+                                break;
+                        }
+                }
             }
         }
     }
 }
+

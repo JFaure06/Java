@@ -19,26 +19,12 @@ public class Personnage {
     private int lifeLevel;
     private int forceLevel;
     private String img;
-
-    /**
-     * Constructeur Personnage vide
-     */
-
-    public Personnage() {
-
-    }
-
-    /**
-     * Constructeur Personnage avec en paramètre :
-     *
-     * @param name Le nom du personnage
-     */
-
-    public Personnage(String name) {
-        this.name = name;
-
-        // lifeLevel=5;
-    }
+    private int maxLife;
+    private int minLife;
+    private int maxForce;
+    private int minForce;
+    private Attack attack;
+    private Defense defense;
 
     /**
      * Constructeur Personnage avec en paramètre :
@@ -47,31 +33,14 @@ public class Personnage {
      * @param lifeLevel
      * @param forceLevel
      */
-
-    public Personnage(String name, int lifeLevel, int forceLevel) {
-
-        this.name = name;
-        this.lifeLevel = lifeLevel;
-        this.forceLevel = forceLevel;
-    }
-
-
-    /**
-     * constructeur Personnage avec en paramètre :
-     *
-     * @param name
-     * @param lifeLevel
-     * @param forceLevel
-     * @param img
-     */
-    public Personnage(String name, int lifeLevel, int forceLevel, String img) {
+    public Personnage(String name, int minLife, int maxLife, int minForce, int maxForce) {
+        this.lifeLevel = (int) (Math.random() * (maxLife - minLife) + 1);
+        this.forceLevel = (int) (Math.random() * (maxForce - minForce) + 1);
 
         this.name = name;
-        this.lifeLevel = lifeLevel;
-        this.forceLevel = forceLevel;
-        this.img = img;
+        this.attack = attack;
+        this.defense = defense;
     }
-
 
     public String getName() {
         return this.name;
@@ -100,10 +69,25 @@ public class Personnage {
         this.forceLevel = forceLevel;
     }
 
+    public Attack getAttack() {
+        return this.attack;
+    }
+
+    public void setAttack(final Attack attack) {
+        this.attack = attack;
+    }
+
+    public Defense getDefense() {
+        return this.defense;
+    }
+
+    public void setDefense(final Defense defense) {
+        this.defense = defense;
+    }
 
     @Override
     public String toString() {
-        return " Nom : " + name + ", img : " + img + ", Vie : " + getLifeLevel() + ", Force : " + getForceLevel();
+        return " Nom : " + name + ", img : " + img + ", Vie : " + getLifeLevel() + ", Force : " + getForceLevel() + ", " + getAttack() + getDefense() + ".";
     }
 }
 

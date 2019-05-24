@@ -1,29 +1,32 @@
 package DungeonsAndDragons;
 
-public class Spell {
-
-    private String name;
+public class Spell extends Attack {
 
     /**
      * Constructeur Spell
-     *
-     * @see Spell#name
      */
+    public Spell() {
 
-    public Spell(){
-
-        this.name = "arcane waves";
+        this("arcane waves");
     }
 
+    public Spell (String name){
+
+        super(name);
+    }
+
+    @Override
     public String getName() {
-        return name;
+        return super.getName();
     }
 
-    public void setName(String name) {
-        this.name = name;
+    @Override
+    public void setName(final String name) {
+        super.setName(name);
     }
 
+    @Override
     public String toString() {
-        return this.name;
+        return getClass().getSimpleName() + " : " + getName() + ", ";
     }
 }
